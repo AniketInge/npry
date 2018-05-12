@@ -1,0 +1,15 @@
+{
+  "name": "npry",
+  "version": "1.0.0",
+  "description": "Pry like REPL for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "pry",
+    "npry"
+  ],
+  "author": "Aniket Inge",
+  "license": "MIT"
+}
