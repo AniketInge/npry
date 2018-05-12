@@ -11,5 +11,8 @@
     "npry"
   ],
   "author": "Aniket Inge",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^5.1.1"
+  }
 }
