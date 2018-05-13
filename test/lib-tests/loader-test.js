@@ -9,12 +9,23 @@ describe("Loader.js", () => {
     });
 
     it("Should take only one argument", () => {
-      assert.ok(loader.load("file.js"), "Should accept 1 argument");
+      assert.ok(loader.load("media/file1.txt"), "Should accept 1 argument");
     });
 
     it("Should set the internal filename variable to whatever was passed", () => {
-      loader.load("file2.js");
-      assert.equal(loader.getFile(), "file2.js");
+      loader.load("media/file1.txt");
+      assert.equal(loader.getFile(), "media/file1.txt");
+    });
+
+    it("Should check if the file exists", () => {
+      loader.load("media/file1.txt");
+      assert.equal(loader.hasLoaded(), true);
+    });
+
+    it("Should throw an exception if the file doesn't exist", () => {
+      assert.throws(() => {
+        loader.load("media/doesnot-exist.txt");
+      }, Error);
     });
   });
 });
